@@ -7,3 +7,18 @@
 */
 
 /* ====== General Style ====== */
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+body {
+    font-family: 'Overpass' , sans-serif !important;
+
+}
+
+
+/* ====== Password Box ====== */
+.box {
+    width: 400px;
+    height: 300px;
+    color: #ee6c4d;
+    background-color: #293241;
+}

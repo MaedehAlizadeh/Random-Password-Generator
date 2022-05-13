@@ -23,9 +23,31 @@ body {
     background-color: #293241;
 }
 
+form {
+    grid-template-rows: repeat(4 , 1fr)
+}
+
+form h3 {
+    grid-row: 1 / 2;
+}
+
+form input{
+    grid-row: 2 / 3;
+}
+
+form .copy-msg {
+    grid-row: 3 / 4;
+}
+
+form .generate-btn{
+    grid-row: 4 / 5;
+    height: 40px;
+}
+
 .copy-btn {
-    top: 107px;
-    left: 310px;
+    width: 45px;
+    top: 85px;
+    left: 306px;
 }
 
 

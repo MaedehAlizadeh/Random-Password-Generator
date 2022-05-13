@@ -4,12 +4,14 @@
 const randomPass = document.querySelector('.form-control');
 const passGenBtn = document.querySelector('.generate-btn');
 const copyBtn = document.querySelector('.copy-btn')
+const copyMsg = document.querySelector('.copy-msg');
 
 passGenBtn.addEventListener('click' , generatePass);
-
+copyBtn.addEventListener('click' , copyPass);
 
 function generatePass(event) {
     event.preventDefault();
+    copyMsg.style.setProperty("display", "none");
     const char = '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let pass = '';
     const passLength = 16;
@@ -21,5 +23,16 @@ function generatePass(event) {
 
     randomPass.value = pass;
     
+    if( !(!randomPass.value) ) {
+        copyBtn.style.setProperty("display", "block", "important");
+    }
+}
+
+
+function copyPass(event) {
+    event.preventDefault();
+    randomPass.select();
+    document.execCommand('copy');
+    copyMsg.style.setProperty("display", "block", "important");
 }
 
